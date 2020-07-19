@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        a {
+            color: white;
+        }
+
+        body {
+            background-image: url("../img/header_img.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+
+            margin: 0;
+        }

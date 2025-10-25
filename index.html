@@ -1,217 +1,511 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <title>Mehran Kamrani</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehran Kamrani - Full Stack Developer</title>
+    <meta name="description" content="Mehran Kamrani - Computer Engineering Student & Full Stack Developer specializing in Django, Python, JavaScript, and modern web technologies">
     <meta name="author" content="Mehran Kamrani">
-
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <style>
-
-    </style>
-    <link rel="stylesheet" href="../untitled9/css/style.css">
-
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-targer="#MainMenu"
-                aria-controls="MainMenu" aria-expanded="false" aria-label="show menu">
-            <span class="navbar-collapse-toggler-icon"> </span>
-        </button>
-
-        <div class="collapse navbar-collapse" style="margin-left: 30%" id="MainMenu">
-            <ul class="navbar-nav ">
-                <li class="navbar-item active">
-                    <a class="nav-link" href="#homePage">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="nav-link" href="#skill">Skills</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="nav-link" href="#language">Languages</a>
-                </li>
-                <li class="navbar-item">
-                    <a class="nav-link" href="#employment">Employment</a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid" id="homePage">
-    <div class="row">
-        <img src="img/header-background.jpg " class="card-img-overlay">
-        <div class="card flex-wrap flex-column " id="meh"
-             style="padding: 5% 12% 5% 12%;margin-left: 20%;margin-top: 10%;background-color: rgba(33, 33, 33, .8);">
-            <img id="profile-image" src="img/mehran.jpg" class="rounded-circle img-thumbnail"/>
-            <h1 style="margin-left: 16%; " class="text-light"><b>Mehran<span class="badge badge-light badge-pill"> Kamrani</span></b>
-            </h1>
-            <div style="margin-left: 30%;">
-                <a href="https://github.com/mehran1421"><i class="fab fa-github" style="font-size: 24px;"></i></a>
-                <a href="https://t.me/i_am_mehran_kamrani"><i class="fab fa-telegram" style="font-size: 24px;"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=09359374548"><i class="fab fa-whatsapp" style="font-size: 24px;"></i></a>
-                <a href="https://twitter.com"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
-                <a href="https://www.instagram.com/m.kamrani1/"><i class="fab fa-instagram"
-                                                                   style="font-size: 24px;"></i></a>
-
-            </div>
-            <p class="text-light text-sm-center">Mobile Number</br><span class="badge badge-light badge-pill"> ندارم
-</span>
-            </p>
-        </div>
-    </div>
-</div>
-</div>
-<div class="container" style="margin-top: 25%;" id="about">
-    <div class="ml-5" style="rgba(33, 33, 33,.7);">
-        <h1 class="display-4 text-light">Know me better :)</h1>
-        <br/>
-        <h3 class="text-light shadow">
-            My programming life started in 2019 with the implementation of various programs from very small to
-            relatively large apps with JAVA language. i am computer engineering student of shahrood University of
-            Technology interested in graphics,Android and web programing
-        </h3>
-        <br>
-        <br>
-        <h3 class="text-light shadow">
-            also always open to learning new stuff.
-            But currently I've began learning Android programing because I love this field and It's the future of
-            everything.
-            This is not my full resume. I'll complete it as soon as I can.
-        </h3>
-    </div>
-
-
-</div>
-<hr/>
-<div class="container-fluid bg-white" id="education">
-
-    <h1 class="text-black-50 font-weight-bold ">Education</h1>
-    <br>
-    <div>
-        <div class="bg-light">
-            <img class="w-25" src="img/university.png">
-            <div class="float-right" style="margin-right:400px;margin-top: 70px;">
-                <a class="text-black-50" href="https://shahroodut.ac.ir/en/"><h3>Shahrood University of Technology</h3>
-                </a>
-                <h3>Computer engineering (Software)</h3>
-                <h4>2018-2021</h4>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">MK</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <hr/>
-
-        <div>
-            <div class="bg-white">
-                <img class="w-25 " src="img/school.jpg">
-                <div class="float-right" style="margin-right: 400px;margin-top: 70px;">
-                    <a class="text-black-50" href="http://hemmatschool19.ir/"><h3>Shahid hemmat in Tehran</h3></a>
-                    <h3>Mathematics and Physics</h3>
-                    <h4>2014-2017</h4>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="particles"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack Developer</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="highlight">Mehran Kamrani</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            Computer Engineering Student & Full Stack Developer
+                        </h2>
+                        <p class="hero-description">
+                            Passionate about creating innovative solutions with Django, Python, JavaScript, and modern web technologies. 
+                            Always learning and building something new! 🚀
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary btn-lg">
+                                <i class="fas fa-code"></i> View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope"></i> Get In Touch
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/mehran1421" target="_blank" class="social-link" title="GitHub - mehran1421">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/kamraniwork" target="_blank" class="social-link" title="GitHub - kamraniwork">
+                                <i class="fab fa-github-alt"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mehran-kamrani-b8b5a2228/" target="_blank" class="social-link" title="LinkedIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:m.kamrani1421@gmail.com" class="social-link" title="Email Me">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <!-- Profile Image -->
+                            <img src="img/mehran.jpg" 
+                                 alt="Mehran Kamrani" 
+                                 class="profile-image">
+                            <div class="image-glow"></div>
+                            <div class="profile-badge">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </div>
+                        </div>
+                        <div class="floating-tech-icons">
+                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="400">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fab fa-django"></i>
+                            </div>
+                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="600">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-</div>
-<hr>
-<!--Skill-->
-<div class=" bg-dark container-fluid" id="skill">
-    <br>
-    <h1 class="text-light w-25 ml-5"><b>Skills</b></h1>
-
-    <div style="margin-left: 20%">
-        <h4 class="text-light">Adobe Photoshop</h4>
-        <div class="progress bg-light m-4 w-50"style="height: 30px;">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 30%">30%</div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
+    </section>
 
-        <h4 class="text-light">Java,JavaFx,...</h4>
-        <div class="progress bg-light m-4 w-50" style="height: 30px;">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 60%">60%</div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                        Get to know me better
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3>Hello! I'm Mehran Kamrani 👋</h3>
+                        <p>
+                            I'm a Computer Engineering student at Shahrood University of Technology, passionate about 
+                            full-stack development and creating innovative solutions. My programming journey started in 2019 
+                            with Java, and I've since expanded my expertise to include modern web technologies.
+                        </p>
+                        <p>
+                            I love working with <strong>Django</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, 
+                            and exploring new technologies. I'm always eager to learn and contribute to open-source projects.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h4>4+</h4>
+                                <p>Years Programming</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>17+</h4>
+                                <p>GitHub Repositories</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>173+</h4>
+                                <p>GitHub Stars</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="img/header_img.jpg" alt="About Mehran" class="about-img">
+                            <div class="floating-elements">
+                                <div class="floating-element element-1">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="floating-element element-2">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <div class="floating-element element-3">
+                                    <i class="fab fa-django"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h4 class="text-light">Cpp</h4>
-        <div class="progress bg-light m-4 w-50" style="height: 30px;">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 40%">40%</div>
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title text-light" data-aos="fade-up">Skills & Technologies</h2>
+                    <p class="section-subtitle text-light" data-aos="fade-up" data-aos-delay="100">
+                        Technologies I work with
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Backend Development</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Django</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-laptop-code"></i> Frontend Development</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bootstrap</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tools"></i> Tools & Others</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PostgreSQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h4 class="text-light">Android(kotlin)</h4>
-        <div class="progress bg-light m-4 w-50" style="height: 30px;">
-            <div class="progress-bar  bg-success progress-bar-striped progress-bar-animated" style="width: 0%">0%</div>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                        Some of my recent work
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/freelancer.png" alt="Ecommerce Project">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/mehran1421/Ecommerce" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Ecommerce Platform</h4>
+                            <p>A full-stack ecommerce application built with Django and modern web technologies.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/university.png" alt="Library Management">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/kamraniwork/library-management" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Library Management System</h4>
+                            <p>Comprehensive library management system with Django REST framework and JWT authentication.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Django REST</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Celery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/school.jpg" alt="Web Crawler">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/kamraniwork/w3school-crawl" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>W3School Web Crawler</h4>
+                            <p>Web crawler built with Scrapy framework to index W3School data to Elasticsearch.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Scrapy</span>
+                                <span class="tech-tag">Elasticsearch</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h4 class="text-light">html,css,bootstrap4</h4>
-        <div class="progress bg-light m-4 w-50" style="height: 30px;">
-            <div class="progress-bar  bg-success progress-bar-striped progress-bar-animated" style="width: 37%">37%</div>
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">Education</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                        My academic journey
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h4>Shahrood University of Technology</h4>
+                            <h5>Computer Engineering (Software)</h5>
+                            <p class="education-period">2018 - 2021</p>
+                            <p>Studied computer engineering with focus on software development, algorithms, and system design.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-content">
+                            <h4>Shahid Hemmat High School</h4>
+                            <h5>Mathematics and Physics</h5>
+                            <p class="education-period">2014 - 2017</p>
+                            <p>Completed high school education with focus on mathematics and physics, laying the foundation for engineering studies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h4 class="text-light">Python</h4>
-        <div class="progress bg-light m-4 w-50" style="height: 30px;">
-            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 10%">10%</div>
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title text-light" data-aos="fade-up">Get In Touch</h2>
+                    <p class="section-subtitle text-light" data-aos="fade-up" data-aos-delay="100">
+                        Let's work together on something amazing
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-card" data-aos="fade-up">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>m.kamrani1421@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p>Tehran, Iran</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h5>GitHub</h5>
+                                    <p>github.com/mehran1421</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="mailto:m.kamrani1421@gmail.com" class="btn btn-primary btn-lg">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                            <a href="https://github.com/mehran1421" target="_blank" class="btn btn-outline-light btn-lg">
+                                <i class="fab fa-github"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <br>
-    </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2024 Mehran Kamrani. All rights reserved.</p>
+                    <p>Made with ❤️ and lots of ☕</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-</div>
-<hr/>
-<!--Language-->
-<div class="container-fluid" id="language">
-
-    <h1 class="text-light">My languages</h1>
-
-    <!--Persian-->
-    <div class="bg-dark w-50 h-25" style="margin-left: 300px;">
-        <h2 class="text-light">Persian(IRAN)</h2>
-        <br>
-        <br>
-        <h5 class="text-light">Native</h5>
-    </div>
-    <hr>
-    <!--English-->
-    <div class="bg-dark w-50 h-25" style="margin-left: 300px;">
-        <h2 class="text-light">English</h2>
-        <br>
-        <br>
-        <h5 class="text-light">Fluent Almost:)))))))</h5>
-    </div>
-
-
-</div>
-<hr>
-<br>
-<!--Employment-->
-<div class="container-fluid" id="employment">
-    <h1 class="text-light">Employment</h1>
-    <br>
-    <br>
-    <h5 class="text-light">I have any working history</h5>
-</div>
-<br>
-    <br>
-<footer class="container-fluid bg-dark justify-content-center">
-    <h3 class="text-light">© 2020</h3>
-
-    <div>
-        <h3 class="text-light">Mail: m.kamrani1421@gmail.com</h3>
-    </div>
-</footer>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 <script>(function(){var d=new Date();var v=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+String(d.getHours()).padStart(2,'0');var s=document.createElement('script');s.defer=true;s.setAttribute('data-enable-inspector','true');s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');s.setAttribute('data-domain','mehran1421.github.io');s.setAttribute('data-is-stage','true');s.src='https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/46181f80-7f3e-40e1-9516-1af439e5c892.js?v='+v;document.head.appendChild(s);})();</script>
 </body>
 </html>

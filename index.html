@@ -8,7 +8,7 @@
     <meta name="author" content="Mehran Kamrani">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Bootstrap -->
@@ -17,10 +17,41 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS Variables -->
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-light: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
 </head>
 <body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#home">
                 <span class="brand-text">MK</span>
@@ -43,9 +74,6 @@
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -55,83 +83,111 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <!-- Animated Background -->
         <div class="hero-background">
-            <div class="particles"></div>
-            <div class="hero-overlay"></div>
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="gradient-overlay"></div>
         </div>
+
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="hero-content">
-                        <div class="hero-badge" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fas fa-code"></i>
-                            <span>Full Stack Developer</span>
+                        <!-- Status Badge -->
+                        <div class="status-badge" data-aos="fade-up" data-aos-delay="200">
+                            <div class="status-dot"></div>
+                            <span>Available for work</span>
                         </div>
+
+                        <!-- Main Title -->
                         <h1 class="hero-title">
-                            Hi, I'm <span class="highlight">Mehran Kamrani</span>
+                            <span class="title-line">Hi, I'm</span>
+                            <span class="title-line highlight">Mehran Kamrani</span>
                         </h1>
+
+                        <!-- Subtitle -->
                         <h2 class="hero-subtitle">
-                            Computer Engineering Student & Full Stack Developer
+                            <span class="typing-text">Full Stack Developer</span>
+                            <span class="cursor-blink">|</span>
                         </h2>
+
+                        <!-- Description -->
                         <p class="hero-description">
-                            Passionate about creating innovative solutions with Django, Python, JavaScript, and modern web technologies. 
-                            Always learning and building something new! 🚀
+                            Passionate Computer Engineering student creating innovative solutions with 
+                            <span class="highlight-text">Django</span>, 
+                            <span class="highlight-text">Python</span>, 
+                            <span class="highlight-text">JavaScript</span>, 
+                            and modern web technologies.
                         </p>
+
+                        <!-- Action Buttons -->
                         <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary btn-lg">
-                                <i class="fas fa-code"></i> View My Work
+                            <a href="#projects" class="btn btn-primary btn-lg glass-btn">
+                                <i class="fas fa-code"></i>
+                                <span>View My Work</span>
                             </a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg">
-                                <i class="fas fa-envelope"></i> Get In Touch
+                            <a href="#contact" class="btn btn-outline-light btn-lg glass-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Get In Touch</span>
                             </a>
                         </div>
+
+                        <!-- Social Links -->
                         <div class="social-links">
-                            <a href="https://github.com/mehran1421" target="_blank" class="social-link" title="GitHub - mehran1421">
+                            <a href="https://github.com/mehran1421" target="_blank" class="social-link" data-tooltip="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://github.com/kamraniwork" target="_blank" class="social-link" title="GitHub - kamraniwork">
+                            <a href="https://github.com/kamraniwork" target="_blank" class="social-link" data-tooltip="GitHub Work">
                                 <i class="fab fa-github-alt"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/mehran-kamrani-b8b5a2228/" target="_blank" class="social-link" title="LinkedIn Profile">
+                            <a href="https://www.linkedin.com/in/mehran-kamrani-b8b5a2228/" target="_blank" class="social-link" data-tooltip="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="mailto:m.kamrani1421@gmail.com" class="social-link" title="Email Me">
+                            <a href="mailto:m.kamrani1421@gmail.com" class="social-link" data-tooltip="Email">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="hero-image">
                         <div class="image-container">
                             <!-- Profile Image -->
-                            <img src="img/mehran.jpg" 
-                                 alt="Mehran Kamrani" 
-                                 class="profile-image">
-                            <div class="image-glow"></div>
-                            <div class="profile-badge">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </div>
-                        </div>
-                        <div class="floating-tech-icons">
-                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="300">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="400">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="500">
-                                <i class="fab fa-django"></i>
-                            </div>
-                            <div class="tech-icon" data-aos="zoom-in" data-aos-delay="600">
-                                <i class="fab fa-git-alt"></i>
+                            <div class="profile-image-wrapper">
+                                <img src="img/mehran.jpg" alt="Mehran Kamrani" class="profile-image">
+                                <div class="image-glow"></div>
+                                <div class="floating-elements">
+                                    <div class="floating-element" data-tech="Python">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div class="floating-element" data-tech="JavaScript">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <div class="floating-element" data-tech="Django">
+                                        <i class="fab fa-django"></i>
+                                    </div>
+                                    <div class="floating-element" data-tech="Git">
+                                        <i class="fab fa-git-alt"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <div class="scroll-arrow">
                 <i class="fas fa-chevron-down"></i>
@@ -144,7 +200,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                    <h2 class="section-title" data-aos="fade-up">
+                        <span class="title-number">01</span>
+                        About Me
+                    </h2>
                     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                         Get to know me better
                     </p>
@@ -153,28 +212,33 @@
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="about-content">
-                        <h3>Hello! I'm Mehran Kamrani 👋</h3>
-                        <p>
-                            I'm a Computer Engineering student at Shahrood University of Technology, passionate about 
-                            full-stack development and creating innovative solutions. My programming journey started in 2019 
-                            with Java, and I've since expanded my expertise to include modern web technologies.
-                        </p>
-                        <p>
-                            I love working with <strong>Django</strong>, <strong>Python</strong>, <strong>JavaScript</strong>, 
-                            and exploring new technologies. I'm always eager to learn and contribute to open-source projects.
-                        </p>
+                        <div class="about-text">
+                            <h3>Hello! I'm Mehran Kamrani 👋</h3>
+                            <p>
+                                I'm a Computer Engineering student at Shahrood University of Technology, 
+                                passionate about full-stack development and creating innovative solutions. 
+                                My programming journey started in 2019 with Java, and I've since expanded 
+                                my expertise to include modern web technologies.
+                            </p>
+                            <p>
+                                I love working with <strong>Django</strong>, <strong>Python</strong>, 
+                                <strong>JavaScript</strong>, and exploring new technologies. I'm always 
+                                eager to learn and contribute to open-source projects.
+                            </p>
+                        </div>
+                        
                         <div class="about-stats">
-                            <div class="stat-item">
-                                <h4>4+</h4>
-                                <p>Years Programming</p>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-number" data-count="4">0</div>
+                                <div class="stat-label">Years Programming</div>
                             </div>
-                            <div class="stat-item">
-                                <h4>17+</h4>
-                                <p>GitHub Repositories</p>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-number" data-count="17">0</div>
+                                <div class="stat-label">GitHub Repositories</div>
                             </div>
-                            <div class="stat-item">
-                                <h4>173+</h4>
-                                <p>GitHub Stars</p>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                                <div class="stat-number" data-count="173">0</div>
+                                <div class="stat-label">GitHub Stars</div>
                             </div>
                         </div>
                     </div>
@@ -183,15 +247,10 @@
                     <div class="about-image">
                         <div class="image-wrapper">
                             <img src="img/header_img.jpg" alt="About Mehran" class="about-img">
-                            <div class="floating-elements">
-                                <div class="floating-element element-1">
-                                    <i class="fab fa-python"></i>
-                                </div>
-                                <div class="floating-element element-2">
-                                    <i class="fab fa-js-square"></i>
-                                </div>
-                                <div class="floating-element element-3">
-                                    <i class="fab fa-django"></i>
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h4>Always Learning</h4>
+                                    <p>Passionate about technology</p>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +265,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title text-light" data-aos="fade-up">Skills & Technologies</h2>
+                    <h2 class="section-title text-light" data-aos="fade-up">
+                        <span class="title-number">02</span>
+                        Skills & Technologies
+                    </h2>
                     <p class="section-subtitle text-light" data-aos="fade-up" data-aos-delay="100">
                         Technologies I work with
                     </p>
@@ -214,29 +276,44 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="skill-category">
-                        <h4><i class="fas fa-code"></i> Backend Development</h4>
+                    <div class="skill-category glass-card">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h4>Backend Development</h4>
+                        </div>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Python</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Django</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Django</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="80"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Java</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="75"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">C++</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="70"></div>
                                 </div>
@@ -245,29 +322,44 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-category">
-                        <h4><i class="fas fa-laptop-code"></i> Frontend Development</h4>
+                    <div class="skill-category glass-card">
+                        <div class="skill-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>Frontend Development</h4>
+                        </div>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="80"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">HTML5</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">CSS3</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Bootstrap</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="75"></div>
                                 </div>
@@ -276,29 +368,44 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-category">
-                        <h4><i class="fas fa-tools"></i> Tools & Others</h4>
+                    <div class="skill-category glass-card">
+                        <div class="skill-header">
+                            <i class="fas fa-tools"></i>
+                            <h4>Tools & Others</h4>
+                        </div>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Git</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Docker</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="70"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="75"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">PostgreSQL</span>
+                                <div class="skill-info">
+                                    <span class="skill-name">PostgreSQL</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="70"></div>
                                 </div>
@@ -315,7 +422,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                    <h2 class="section-title" data-aos="fade-up">
+                        <span class="title-number">03</span>
+                        Featured Projects
+                    </h2>
                     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                         Some of my recent work
                     </p>
@@ -323,13 +433,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="project-card">
+                    <div class="project-card glass-card">
                         <div class="project-image">
                             <img src="img/freelancer.png" alt="Ecommerce Project">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/mehran1421/Ecommerce" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
                             </div>
@@ -346,13 +459,16 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
+                    <div class="project-card glass-card">
                         <div class="project-image">
                             <img src="img/university.png" alt="Library Management">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/kamraniwork/library-management" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
                             </div>
@@ -369,13 +485,16 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
+                    <div class="project-card glass-card">
                         <div class="project-image">
                             <img src="img/school.jpg" alt="Web Crawler">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="https://github.com/kamraniwork/w3school-crawl" target="_blank" class="project-link">
                                         <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
                             </div>
@@ -395,54 +514,15 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title" data-aos="fade-up">Education</h2>
-                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                        My academic journey
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4" data-aos="fade-right">
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="education-content">
-                            <h4>Shahrood University of Technology</h4>
-                            <h5>Computer Engineering (Software)</h5>
-                            <p class="education-period">2018 - 2021</p>
-                            <p>Studied computer engineering with focus on software development, algorithms, and system design.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4" data-aos="fade-left">
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <i class="fas fa-school"></i>
-                        </div>
-                        <div class="education-content">
-                            <h4>Shahid Hemmat High School</h4>
-                            <h5>Mathematics and Physics</h5>
-                            <p class="education-period">2014 - 2017</p>
-                            <p>Completed high school education with focus on mathematics and physics, laying the foundation for engineering studies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="section bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title text-light" data-aos="fade-up">Get In Touch</h2>
+                    <h2 class="section-title text-light" data-aos="fade-up">
+                        <span class="title-number">04</span>
+                        Get In Touch
+                    </h2>
                     <p class="section-subtitle text-light" data-aos="fade-up" data-aos-delay="100">
                         Let's work together on something amazing
                     </p>
@@ -450,36 +530,44 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="contact-card" data-aos="fade-up">
+                    <div class="contact-card glass-card" data-aos="fade-up">
                         <div class="contact-info">
                             <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
                                     <h5>Email</h5>
                                     <p>m.kamrani1421@gmail.com</p>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
                                     <h5>Location</h5>
                                     <p>Tehran, Iran</p>
                                 </div>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-code"></i>
-                                <div>
+                                <div class="contact-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="contact-details">
                                     <h5>GitHub</h5>
                                     <p>github.com/mehran1421</p>
                                 </div>
                             </div>
                         </div>
                         <div class="contact-actions">
-                            <a href="mailto:m.kamrani1421@gmail.com" class="btn btn-primary btn-lg">
-                                <i class="fas fa-envelope"></i> Send Email
+                            <a href="mailto:m.kamrani1421@gmail.com" class="btn btn-primary btn-lg glass-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Send Email</span>
                             </a>
-                            <a href="https://github.com/mehran1421" target="_blank" class="btn btn-outline-light btn-lg">
-                                <i class="fab fa-github"></i> View GitHub
+                            <a href="https://github.com/mehran1421" target="_blank" class="btn btn-outline-light btn-lg glass-btn">
+                                <i class="fab fa-github"></i>
+                                <span>View GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -493,7 +581,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>&copy; 2024 Mehran Kamrani. All rights reserved.</p>
+                    <p>&copy; 2020 Mehran Kamrani. All rights reserved.</p>
                     <p>Made with ❤️ and lots of ☕</p>
                 </div>
             </div>
@@ -506,6 +594,5 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-<script>(function(){var d=new Date();var v=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+String(d.getHours()).padStart(2,'0');var s=document.createElement('script');s.defer=true;s.setAttribute('data-enable-inspector','true');s.setAttribute('data-api','https://loadtest.adtrace.ir/api/event');s.setAttribute('data-domain','mehran1421.github.io');s.setAttribute('data-is-stage','true');s.src='https://loadtest.adtrace.ir/analytics-sdk-stage/scripts/v1/46181f80-7f3e-40e1-9516-1af439e5c892.js?v='+v;document.head.appendChild(s);})();</script>
 </body>
 </html>
